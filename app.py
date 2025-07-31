@@ -74,12 +74,12 @@ if text:
     edited = st.text_area("📝 Edit transcription", text, height=200)
 
     # Save to session's growing Word doc
-    if st.button("➕ Add to session document"):
+    if st.button("➕ Click Here for Incremental document!" ):
         run = st.session_state.doc.add_paragraph().add_run(edited)
         run.font.size = Pt(14)
         if lang_option != "English":
             run.font.name = "Mangal"
-        st.success("✅ After completion of Recording Click here to Added to Single session document!")
+        st.success("✅ Add to session document!")
 
     # Allow download
     if st.button("💾 Download Fully Compiled Document (.docx)"):
