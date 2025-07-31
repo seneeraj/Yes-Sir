@@ -8,7 +8,7 @@ from io import BytesIO
 import tempfile
 import time
 
-st.set_page_config(page_title="🎙️ Voice Typing App", layout="centered")
+st.set_page_config(page_title="🎙️ Yes Sir- Incremental Stenographer", layout="centered")
 st.title("🗣️ Voice Typing — Hindi / English / Hinglish")
 
 # Initialize doc in session
