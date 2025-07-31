@@ -9,7 +9,7 @@ import tempfile
 import time
 
 st.set_page_config(page_title="🎙️ Yes Sir- Incremental Stenographer", layout="centered")
-st.title("🗣️ Voice Typing — Hindi / English / Hinglish")
+st.title("🗣️ Yes-Sir Application")
 
 # Initialize doc in session
 if "doc" not in st.session_state:
@@ -79,10 +79,10 @@ if text:
         run.font.size = Pt(14)
         if lang_option != "English":
             run.font.name = "Mangal"
-        st.success("✅ Added to session document!")
+        st.success("✅ After completion of Recording Click here to Added to Single session document!")
 
     # Allow download
-    if st.button("💾 Download Full Document (.docx)"):
+    if st.button("💾 Download Fully Compiled Document (.docx)"):
         buf = BytesIO()
         st.session_state.doc.save(buf)
         buf.seek(0)
