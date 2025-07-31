@@ -9,7 +9,7 @@ import tempfile
 import time
 
 st.set_page_config(page_title="🎙️ Voice Typing App", layout="centered")
-st.title("🗣️ Yes-Sir - Your Assistant")
+st.title("🗣️ Voice Typing — Hindi / English / Hinglish")
 
 # Initialize doc in session
 if "doc" not in st.session_state:
