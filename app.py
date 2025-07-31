@@ -8,8 +8,8 @@ from io import BytesIO
 import tempfile
 import time
 
-st.set_page_config(page_title="🎙️ Yes Sir- Incremental Stenographer", layout="centered")
-st.title("🗣️ Yes-Sir Application")
+st.set_page_config(page_title="🎙️ Voice Typing App", layout="centered")
+st.title("🗣️ Voice Typing — Hindi / English / Hinglish")
 
 # Initialize doc in session
 if "doc" not in st.session_state:
@@ -74,15 +74,15 @@ if text:
     edited = st.text_area("📝 Edit transcription", text, height=200)
 
     # Save to session's growing Word doc
-    if st.button("➕ Click Here for Incremental document!" ):
+    if st.button("➕ Add to session document"):
         run = st.session_state.doc.add_paragraph().add_run(edited)
         run.font.size = Pt(14)
         if lang_option != "English":
             run.font.name = "Mangal"
-        st.success("✅ Add to session document!")
+        st.success("✅ Added to session document!")
 
     # Allow download
-    if st.button("💾 Download Fully Compiled Document (.docx)"):
+    if st.button("💾 Download Full Document (.docx)"):
         buf = BytesIO()
         st.session_state.doc.save(buf)
         buf.seek(0)
